@@ -1,0 +1,801 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Home</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <script src="js/bootstrap.js"></script>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+            overflow-x: hidden;
+        }
+
+        .active {
+            color: rgb(0, 80, 255);
+        }
+
+        .header {
+            position: fixed;
+            height: 15%;
+            top: 0;
+            left: 0;
+            padding: 0 100px;
+            background: #ffffff;
+            width: 100%;
+            box-sizing: border-box;
+            z-index: 999;
+
+        }
+
+        .header .logo {
+            color: rgb(17, 17, 17);
+            height: 50px;
+            line-height: 50px;
+            font-size: calc(1em + 1vw);
+            float: left;
+            font-weight: bold;
+            padding-top: 20px;
+
+        }
+
+        .header nav {
+            float: right;
+        }
+
+        .header nav ul {
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        .header nav ul li {
+            list-style: none;
+            padding-top: 20px;
+        }
+
+        .header nav ul li a {
+            height: 50px;
+            line-height: 50px;
+            padding: 0 20px;
+            color: rgb(17, 17, 17);
+            text-decoration: none;
+
+        }
+
+        .header nav ul li a:hover,
+        .header nav ul li a:active {
+            color: rgb(0, 80, 255);
+        }
+
+        #project-manager {
+            font-weight: normal;
+            font-size: 17px;
+        }
+
+
+        /*mobileview*/
+        @media (min-width: 320px) and (max-width: 480px) {
+            /*humburgerbutton*/
+            .menu-btn {
+                position: relative;
+                display: flex;
+                float: right;
+                justify-content: center;
+                align-items: center;
+                width: 100px;
+                height: 50px;
+                cursor: pointer;
+                transition: all .5s ease-in-out;
+                margin-top: 20px;
+                padding-top: 0;
+                /* border: 3px solid #fff; */
+            }
+
+            .menu-btn__burger {
+                width: 50px;
+                height: 6px;
+                background: rgb(0, 80, 255);
+                border-radius: 5px;
+                box-shadow: 0 2px 5px rgba(255, 101, 47, .2);
+                transition: all .5s ease-in-out;
+            }
+
+            .menu-btn__burger::before,
+            .menu-btn__burger::after {
+                content: '';
+                position: absolute;
+                width: 40px;
+                height: 6px;
+
+                background: rgb(0, 80, 255);
+                border-radius: 5px;
+                box-shadow: 0 2px 5px rgba(255, 101, 47, .2);
+                transition: all .5s ease-in-out;
+            }
+
+            .menu-btn__burgerchange::before {
+                background: #8A837C;
+            }
+
+            .menu-btn__burger::before {
+                transform: translateY(-16px);
+            }
+
+            .menu-btn__burger::after {
+                transform: translateY(16px);
+            }
+
+            /* ANIMATION */
+            .menu-btn.open .menu-btn__burger {
+                transform: translateX(-50px);
+                background: transparent;
+                box-shadow: none;
+            }
+
+            .menu-btn.open .menu-btn__burger::before {
+                transform: rotate(45deg) translate(35px, -35px);
+            }
+
+            .menu-btn.open .menu-btn__burger::after {
+                transform: rotate(-45deg) translate(35px, 35px);
+            }
+
+            /*humburgerbutton*/
+            .header {
+                padding: 0 20px;
+
+            }
+
+
+            .header nav {
+                position: absolute;
+                width: 100%;
+                height: calc(100vh - 0px);
+                background: #F4ECE6;
+                font-size: 20px;
+
+                left: -100%;
+                transition: 0.5s;
+            }
+
+            .header nav.active {
+                left: 0;
+            }
+
+            .header nav ul {
+                display: block;
+                text-align: center;
+                padding-top: 40px;
+            }
+
+            .header nav ul li {
+
+                margin-top: 40px;
+
+
+            }
+
+            .header nav ul li a {
+                font-size: 20px;
+                font-weight: bold;
+            }
+
+            #project-manager {
+                font-weight: normal;
+                font-size: 17px;
+            }
+        }
+
+
+        @media (min-width: 481px) and (max-width: 767px) {
+            /*humburgerbutton*/
+            .menu-btn {
+                position: relative;
+                display: flex;
+                float: right;
+                justify-content: center;
+                align-items: center;
+                width: 100px;
+                height: 50px;
+                cursor: pointer;
+                transition: all .5s ease-in-out;
+                margin-top: 20px;
+                padding-top: 0;
+                /* border: 3px solid #fff; */
+            }
+
+            .menu-btn__burger {
+                width: 50px;
+                height: 6px;
+                background: rgb(0, 80, 255);
+                border-radius: 5px;
+                box-shadow: 0 2px 5px rgba(255, 101, 47, .2);
+                transition: all .5s ease-in-out;
+            }
+
+            .menu-btn__burger::before,
+            .menu-btn__burger::after {
+                content: '';
+                position: absolute;
+                width: 40px;
+                height: 6px;
+
+                background: rgb(0, 80, 255);
+                border-radius: 5px;
+                box-shadow: 0 2px 5px rgba(255, 101, 47, .2);
+                transition: all .5s ease-in-out;
+            }
+
+            .menu-btn__burgerchange::before {
+                background: #8A837C;
+            }
+
+            .menu-btn__burger::before {
+                transform: translateY(-16px);
+            }
+
+            .menu-btn__burger::after {
+                transform: translateY(16px);
+            }
+
+            /* ANIMATION */
+            .menu-btn.open .menu-btn__burger {
+                transform: translateX(-50px);
+                background: transparent;
+                box-shadow: none;
+            }
+
+            .menu-btn.open .menu-btn__burger::before {
+                transform: rotate(45deg) translate(35px, -35px);
+            }
+
+            .menu-btn.open .menu-btn__burger::after {
+                transform: rotate(-45deg) translate(35px, 35px);
+            }
+
+            /*humburgerbutton*/
+            .header {
+                padding: 0 20px;
+
+            }
+
+
+            .header nav {
+                position: absolute;
+                width: 100%;
+                height: calc(100vh - 0px);
+                background: #F4ECE6;
+                font-size: 20px;
+
+                left: -100%;
+                transition: 0.5s;
+            }
+
+            .header nav.active {
+                left: 0;
+            }
+
+            .header nav ul {
+                display: block;
+                text-align: center;
+                padding-top: 40px;
+            }
+
+            .header nav ul li {
+
+                margin-top: 40px;
+
+
+            }
+
+            .header nav ul li a {
+                font-size: 20px;
+                font-weight: bold;
+            }
+
+            #project-manager {
+                font-weight: normal;
+                font-size: 17px;
+            }
+        }
+
+        @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+            /*humburgerbutton*/
+            .menu-btn {
+                position: relative;
+                display: flex;
+                float: right;
+                justify-content: center;
+                align-items: center;
+                width: 100px;
+                height: 50px;
+                cursor: pointer;
+                transition: all .5s ease-in-out;
+                margin-top: 20px;
+                padding-top: 0;
+                /* border: 3px solid #fff; */
+            }
+
+            .menu-btn__burger {
+                width: 50px;
+                height: 6px;
+                background: rgb(0, 80, 255);
+                border-radius: 5px;
+                box-shadow: 0 2px 5px rgba(255, 101, 47, .2);
+                transition: all .5s ease-in-out;
+            }
+
+            .menu-btn__burger::before,
+            .menu-btn__burger::after {
+                content: '';
+                position: absolute;
+                width: 40px;
+                height: 6px;
+
+                background: rgb(0, 80, 255);
+                border-radius: 5px;
+                box-shadow: 0 2px 5px rgba(255, 101, 47, .2);
+                transition: all .5s ease-in-out;
+            }
+
+            .menu-btn__burgerchange::before {
+                background: #8A837C;
+            }
+
+            .menu-btn__burger::before {
+                transform: translateY(-16px);
+            }
+
+            .menu-btn__burger::after {
+                transform: translateY(16px);
+            }
+
+            /* ANIMATION */
+            .menu-btn.open .menu-btn__burger {
+                transform: translateX(-50px);
+                background: transparent;
+                box-shadow: none;
+            }
+
+            .menu-btn.open .menu-btn__burger::before {
+                transform: rotate(45deg) translate(35px, -35px);
+            }
+
+            .menu-btn.open .menu-btn__burger::after {
+                transform: rotate(-45deg) translate(35px, 35px);
+            }
+
+            /*humburgerbutton*/
+            .header {
+                padding: 0 20px;
+
+            }
+
+
+            .header nav {
+                position: absolute;
+                width: 100%;
+                height: calc(100vh - 0px);
+                background: #F4ECE6;
+                font-size: 20px;
+
+                left: -100%;
+                transition: 0.5s;
+            }
+
+            .header nav.active {
+                left: 0;
+            }
+
+            .header nav ul {
+                display: block;
+                text-align: center;
+                padding-top: 40px;
+            }
+
+            .header nav ul li {
+
+                margin-top: 40px;
+
+
+            }
+
+            .header nav ul li a {
+                font-size: 20px;
+                font-weight: bold;
+            }
+
+            #project-manager {
+                font-weight: normal;
+                font-size: 17px;
+            }
+
+        }
+
+
+
+        /*-----------------*/
+        @media (min-width: 768px) and (max-width: 1024px) {
+            /*humburgerbutton*/
+            .menu-btn {
+                position: relative;
+                display: flex;
+                float: right;
+                justify-content: center;
+                align-items: center;
+                width: 100px;
+                height: 50px;
+                cursor: pointer;
+                transition: all .5s ease-in-out;
+                margin-top: 20px;
+                padding-top: 0;
+                /* border: 3px solid #fff; */
+            }
+
+            .menu-btn__burger {
+                width: 50px;
+                height: 6px;
+                background: rgb(0, 80, 255);
+                border-radius: 5px;
+                box-shadow: 0 2px 5px rgba(255, 101, 47, .2);
+                transition: all .5s ease-in-out;
+            }
+
+            .menu-btn__burger::before,
+            .menu-btn__burger::after {
+                content: '';
+                position: absolute;
+                width: 40px;
+                height: 6px;
+
+                background: rgb(0, 80, 255);
+                border-radius: 5px;
+                box-shadow: 0 2px 5px rgba(255, 101, 47, .2);
+                transition: all .5s ease-in-out;
+            }
+
+            .menu-btn__burgerchange::before {
+                background: #8A837C;
+            }
+
+            .menu-btn__burger::before {
+                transform: translateY(-16px);
+            }
+
+            .menu-btn__burger::after {
+                transform: translateY(16px);
+            }
+
+            /* ANIMATION */
+            .menu-btn.open .menu-btn__burger {
+                transform: translateX(-50px);
+                background: transparent;
+                box-shadow: none;
+            }
+
+            .menu-btn.open .menu-btn__burger::before {
+                transform: rotate(45deg) translate(35px, -35px);
+            }
+
+            .menu-btn.open .menu-btn__burger::after {
+                transform: rotate(-45deg) translate(35px, 35px);
+            }
+
+            /*humburgerbutton*/
+            .header {
+                padding: 0 20px;
+
+            }
+
+
+            .header nav {
+                position: absolute;
+                width: 100%;
+                height: calc(100vh - 0px);
+                background: #F4ECE6;
+                font-size: 20px;
+
+                left: -100%;
+                transition: 0.5s;
+            }
+
+            .header nav.active {
+                left: 0;
+            }
+
+            .header nav ul {
+                display: block;
+                text-align: center;
+                padding-top: 40px;
+            }
+
+            .header nav ul li {
+
+                margin-top: 40px;
+
+
+            }
+
+            .header nav ul li a {
+                font-size: 20px;
+                font-weight: bold;
+            }
+
+            #project-manager {
+                font-weight: normal;
+                font-size: 17px;
+            }
+        }
+
+        /*desktops*/
+        @media (min-width: 1025px) and (max-width: 1280px) {
+        }
+        @media (min-width: 1281px) {
+
+        }
+        .parallax {
+            /* The image used */
+            background-image: url("/images/slider02.jpg");
+
+            /* Set a specific height */
+            min-height: 500px;
+
+            /* Create the parallax scrolling effect */
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            margin-bottom: 100px;
+        }
+    </style>
+    <link rel="stylesheet" href="css/text-animation.css">
+    <link rel="stylesheet" media="screen" href="particles.js-master/demo/css/style.css">
+    <link rel="stylesheet" href="css/type-effect.css">
+</head>
+<body>
+<div class="header">
+<div class="logo text-animation">
+    <h1>Jupiter<span id="project-manager"> Digi Hub</span></h1></div>
+<nav>
+    <ul>
+        <li><a href="home.html" class="active">ABOUT ME</a></li>
+        <li><a href="resume.html">RESUME</a></li>
+        <li><a href="projects.html">PROJECTS</a></li>
+        <li><a href="contact.html">CONTACT</a></li>
+    </ul>
+</nav>
+<div class="menu-btn">
+    <div class="menu-btn__burger"></div>
+</div>
+</div>
+<div class="main parallax">
+    <header id="particles-js">
+        <div class='console-container'><span id='text'></span><div class='console-underscore' id='console'>&#95;</div>
+        </div>
+
+    </header>
+</div>
+<div class="services-section">
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5">
+        <div class="col mb-4">
+            <div class="card">
+                <img src="https://dummyimage.com/600x400/000/fff.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col mb-4">
+            <div class="card">
+                <img src="https://dummyimage.com/600x400/000/fff.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col mb-4">
+            <div class="card">
+                <img src="https://dummyimage.com/600x400/000/fff.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col mb-4">
+            <div class="card">
+                <img src="https://dummyimage.com/600x400/000/fff.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col mb-4">
+            <div class="card">
+                <img src="https://dummyimage.com/600x400/000/fff.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col mb-4">
+            <div class="card">
+                <img src="https://dummyimage.com/600x400/000/fff.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col mb-4">
+            <div class="card">
+                <img src="https://dummyimage.com/600x400/000/fff.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col mb-4">
+            <div class="card">
+                <img src="https://dummyimage.com/600x400/000/fff.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col mb-4">
+            <div class="card">
+                <img src="https://dummyimage.com/600x400/000/fff.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col mb-4">
+            <div class="card">
+                <img src="https://dummyimage.com/600x400/000/fff.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $(".menu-btn").click(function () {
+            $("nav").toggleClass("active");
+
+        });
+    });
+    const menuBtn = document.querySelector('.menu-btn');
+    let menuOpen = false;
+    menuBtn.addEventListener('click', () => {
+        if (!menuOpen) {
+            menuBtn.classList.add('open');
+            menuOpen = true;
+
+
+        } else {
+            menuBtn.classList.remove('open');
+            menuOpen = false;
+        }
+    });
+</script>
+<!-- scripts -->
+<script src="particles.js-master/particles.js"></script>
+<script src="particles.js-master/demo/js/app.js"></script>
+<!-- stats.js -->
+<script src="particles.js-master/demo/js/lib/stats.js"></script>
+<!--particle-->
+<script>
+    var count_particles, stats, update;
+    stats = new Stats;
+    stats.setMode(0);
+    stats.domElement.style.position = 'absolute';
+    stats.domElement.style.left = '0px';
+    stats.domElement.style.top = '0px';
+    document.body.appendChild(stats.domElement);
+    count_particles = document.querySelector('.js-count-particles');
+    update = function() {
+        stats.begin();
+        stats.end();
+        if (window.pJSDom[0].pJS.particles && window.pJSDom[0].pJS.particles.array) {
+            count_particles.innerText = window.pJSDom[0].pJS.particles.array.length;
+        }
+        requestAnimationFrame(update);
+    };
+    requestAnimationFrame(update);
+</script>
+<!--jupiter span script-->
+<script>
+    const spans = document.querySelectorAll('.word span');
+
+    spans.forEach((span, idx) => {
+        span.addEventListener('click', (e) => {
+            e.target.classList.add('active');
+        });
+        span.addEventListener('animationend', (e) => {
+            e.target.classList.remove('active');
+        });
+
+        // Initial animation
+        setTimeout(() => {
+            span.classList.add('active');
+        }, 750 * (idx+1))
+    });
+</script>
+<script>
+    // function([string1, string2],target id,[color1,color2])
+    consoleText(['Jupiter', 'Digi Hub', 'Amritsar'], 'text',['white','white','white']);
+
+    function consoleText(words, id, colors) {
+        if (colors === undefined) colors = ['#fff'];
+        var visible = true;
+        var con = document.getElementById('console');
+        var letterCount = 1;
+        var x = 1;
+        var waiting = false;
+        var target = document.getElementById(id)
+        target.setAttribute('style', 'color:' + colors[0])
+        window.setInterval(function() {
+
+            if (letterCount === 0 && waiting === false) {
+                waiting = true;
+                target.innerHTML = words[0].substring(0, letterCount)
+                window.setTimeout(function() {
+                    var usedColor = colors.shift();
+                    colors.push(usedColor);
+                    var usedWord = words.shift();
+                    words.push(usedWord);
+                    x = 1;
+                    target.setAttribute('style', 'color:' + colors[0])
+                    letterCount += x;
+                    waiting = false;
+                }, 1000)
+            } else if (letterCount === words[0].length + 1 && waiting === false) {
+                waiting = true;
+                window.setTimeout(function() {
+                    x = -1;
+                    letterCount += x;
+                    waiting = false;
+                }, 1000)
+            } else if (waiting === false) {
+                target.innerHTML = words[0].substring(0, letterCount)
+                letterCount += x;
+            }
+        }, 120)
+        window.setInterval(function() {
+            if (visible === true) {
+                con.className = 'console-underscore hidden'
+                visible = false;
+
+            } else {
+                con.className = 'console-underscore'
+
+                visible = true;
+            }
+        }, 400)
+    }
+</script>
+</body>
+</html>

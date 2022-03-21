@@ -1,0 +1,1335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Resume</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <script src="js/bootstrap.js"></script>
+</head>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: sans-serif;
+        overflow-x: hidden;
+    }
+
+    .active {
+        color: rgb(0, 80, 255);
+    }
+
+    .header {
+        position: fixed;
+        height: 15%;
+        top: 0;
+        left: 0;
+        padding: 0 100px;
+        background: #ffffff;
+        width: 100%;
+        box-sizing: border-box;
+        z-index: 999;
+
+    }
+
+    .header .logo {
+        color: rgb(17, 17, 17);
+        height: 50px;
+        line-height: 50px;
+        font-size: calc(1em + 1vw);
+        float: left;
+        font-weight: bold;
+        padding-top: 20px;
+
+    }
+
+    .header nav {
+        float: right;
+    }
+
+    .header nav ul {
+        margin: 0;
+        padding: 0;
+        display: flex;
+    }
+
+    .header nav ul li {
+        list-style: none;
+        padding-top: 20px;
+    }
+
+    .header nav ul li a {
+        height: 50px;
+        line-height: 50px;
+        padding: 0 20px;
+        color: rgb(17, 17, 17);
+        text-decoration: none;
+
+    }
+
+    .header nav ul li a:hover,
+    .header nav ul li a:active {
+        color: rgb(0, 80, 255);
+    }
+
+    #project-manager {
+        font-weight: normal;
+        font-size: 17px;
+    }
+
+    .blue-box {
+        width: 15px;
+        height: 15px;
+        background-color: rgb(0, 80, 255);
+        padding-bottom: 15px;
+    }
+
+    /*navbar finish*/
+    .back-div {
+        background: #E6DACE;
+        min-height: 1000px;
+        margin-top: 100px;
+        padding-bottom: 150px;
+    }
+
+    .resume-heading {
+        padding-top: 100px;
+        text-align: center;
+
+        font-size: 35px;
+        font-weight: bold;
+        line-height: 32.25px;
+
+    }
+
+    .resume-heading img {
+        width: 15px;
+        height: 15px;
+    }
+
+    .experience-div {
+        margin-top: 100px;
+
+    }
+
+    .experience h2 {
+        font-size: calc(1em + 1vw);
+        font-weight: bold;
+
+        margin-top: 5px;
+    }
+
+    .experience {
+        float: left;
+        text-align: center;
+    }
+
+    .cv {
+        float: right;
+        text-align: center;
+    }
+
+    .resume-btn {
+        background-color: #0050FF;
+        color: white;
+        font-size: 15px;
+        font-weight: bold;
+        width: 150px;
+        height: 30px;
+        border: none;
+        line-height: 20px;
+        border-radius: 50px;
+    }
+
+    .resume-btn:hover {
+        background: transparent;
+        color: black;
+        border: 2px solid #0050FF;
+
+        border-radius: 50px;
+
+    }
+
+    /*firstcarddiv*/
+
+    .first-resume-card {
+        padding-top: 15px;
+        width: 70%;
+        margin-right: auto;
+        margin-left: auto;
+        display: flex;
+    }
+
+    .left-div {
+        width: 50%;
+        background-color: white;
+        float: left;
+    }
+
+    .present {
+        font-size: 20px;
+        font-weight: bold;
+        color: #0050FF;
+
+    }
+
+    .jobposition {
+
+        font-size: 14px;
+        font-weight: bold;
+        color: #000000;
+    }
+
+    .compapnyname {
+        font-size: 14px;
+        color: #000000;
+    }
+
+    .companylocation {
+        font-size: 14px;
+        color: #000000;
+    }
+
+    .left-adjustment {
+
+        padding-top: 30px;
+        padding-left: 20px;
+    }
+
+    .right-div {
+        background-color: white;
+        width: 50%;
+        float: right;
+    }
+
+    .paragraph {
+        padding-top: 80px;
+        padding-bottom: 50px;
+    }
+
+    /*professional sill set*/
+    .professional-skill-set {
+        padding-top: 15px;
+        width: 70%;
+        margin-right: auto;
+        margin-left: auto;
+        margin-top: 50px;
+        background-color: white;
+    }
+
+
+    #professional-heading {
+        width: 100%;
+    }
+
+    #professional-heading h2 {
+        padding-left: 20px;
+        padding-top: 30px;
+        font-weight: bold;
+        font-size: 25px;
+    }
+
+    .left-skillset {
+        width: 50%;
+        float: left;
+    }
+
+    .right-skillset {
+        width: 50%;
+        float: right;
+    }
+
+    .left-skillset span {
+        padding-left: 20px;
+    }
+
+
+    .right-skillset span {
+
+        padding-left: 20px;
+    }
+
+    #language-heading {
+        width: 100%;
+        margin-top: 20px;
+
+    }
+
+    #language-heading h2 {
+        margin-left: 20px;
+        font-size: 25px;
+        font-weight: bold;
+    }
+
+    /*footer section*/
+    .footer {
+        bottom: 0;
+        min-height: 120px;
+    }
+
+    .footer-social-icons {
+        list-style: none;
+        display: flex;
+        margin-top: -20px;
+        margin-left: -50px;
+
+    }
+
+    .footer-social-icons li {
+        padding-top: 10px;
+        padding-left: 15px;
+        list-style: none;
+        display: flex;
+    }
+
+    .follow {
+        margin-left: 25px;
+        margin-top: 50px;
+
+        font-size: 14px;
+    }
+
+    .copyright {
+        margin-top: 50px;
+
+        margin-left: 15px;
+        font-size: 14px;
+    }
+
+    .call {
+        margin-top: 50px;
+        text-align: center;
+        font-size: 14px;
+    }
+
+    .call span {
+
+        font-weight: bold;
+    }
+
+    .write {
+        margin-top: 50px;
+
+        text-align: center;
+        font-size: 14px;
+    }
+
+    .write span {
+        font-weight: bold;
+    }
+
+    .follow span {
+        font-weight: bold;
+    }
+
+
+
+
+
+
+
+
+
+    /*mobileview*/
+    @media (min-width: 320px) and (max-width: 480px) {
+        /*humburgerbutton*/
+        .menu-btn {
+            position: relative;
+            display: flex;
+            float: right;
+            justify-content: center;
+            align-items: center;
+            width: 100px;
+            height: 50px;
+            cursor: pointer;
+            transition: all .5s ease-in-out;
+            margin-top: 20px;
+            padding-top: 0;
+            /* border: 3px solid #fff; */
+        }
+
+        .menu-btn__burger {
+            width: 50px;
+            height: 6px;
+            background: rgb(0, 80, 255);
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(255, 101, 47, .2);
+            transition: all .5s ease-in-out;
+        }
+
+        .menu-btn__burger::before,
+        .menu-btn__burger::after {
+            content: '';
+            position: absolute;
+            width: 40px;
+            height: 6px;
+
+            background: rgb(0, 80, 255);
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(255, 101, 47, .2);
+            transition: all .5s ease-in-out;
+        }
+
+        .menu-btn__burgerchange::before {
+            background: #8A837C;
+        }
+
+        .menu-btn__burger::before {
+            transform: translateY(-16px);
+        }
+
+        .menu-btn__burger::after {
+            transform: translateY(16px);
+        }
+
+        /* ANIMATION */
+        .menu-btn.open .menu-btn__burger {
+            transform: translateX(-50px);
+            background: transparent;
+            box-shadow: none;
+        }
+
+        .menu-btn.open .menu-btn__burger::before {
+            transform: rotate(45deg) translate(35px, -35px);
+        }
+
+        .menu-btn.open .menu-btn__burger::after {
+            transform: rotate(-45deg) translate(35px, 35px);
+        }
+
+        /*humburgerbutton*/
+        .header {
+            padding: 0 20px;
+
+        }
+
+
+        .header nav {
+            position: absolute;
+            width: 100%;
+            height: calc(100vh - 0px);
+            background: #F4ECE6;
+            font-size: 20px;
+
+            left: -100%;
+            transition: 0.5s;
+        }
+
+        .header nav.active {
+            left: 0;
+        }
+
+        .header nav ul {
+            display: block;
+            text-align: center;
+            padding-top: 40px;
+        }
+
+        .header nav ul li {
+
+            margin-top: 40px;
+
+
+        }
+
+        .header nav ul li a {
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        #project-manager {
+            font-weight: normal;
+            font-size: 17px;
+            display: none;
+        }
+
+        .left-skillset {
+            width: 100%;
+        }
+
+        .invisible-mobile-view-footer {
+            display: none;
+        }
+
+        /*footer for mobile*/
+        .footer-for-mobile {
+            padding-top: 5px;
+        }
+
+        .footer-for-mobile .mob-call {
+            float: left;
+        }
+
+        .footer-for-mobile .mob-call span {
+            font-weight: bold;
+        }
+
+        .footer-for-mobile .mob-write {
+            float: right;
+        }
+
+        .footer-for-mobile .mob-write span {
+            font-weight: bold;
+        }
+
+        .footer-for-mobile .mob-follow span {
+            font-weight: bold;
+        }
+
+        .footer-for-mobile ul {
+            list-style: none;
+            display: flex;
+            margin-left: -40px;
+        }
+
+        .footer-for-mobile li {
+            margin-right: 20px;
+        }
+
+    }
+
+    /*-------------------------------------mobileview finish*/
+/*tabview*/
+    @media (min-width: 481px) and (max-width: 767px) {
+        /*humburgerbutton*/
+        .menu-btn {
+            position: relative;
+            display: flex;
+            float: right;
+            justify-content: center;
+            align-items: center;
+            width: 100px;
+            height: 50px;
+            cursor: pointer;
+            transition: all .5s ease-in-out;
+            margin-top: 20px;
+            padding-top: 0;
+            /* border: 3px solid #fff; */
+        }
+
+        .menu-btn__burger {
+            width: 50px;
+            height: 6px;
+            background: rgb(0, 80, 255);
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(255, 101, 47, .2);
+            transition: all .5s ease-in-out;
+        }
+
+        .menu-btn__burger::before,
+        .menu-btn__burger::after {
+            content: '';
+            position: absolute;
+            width: 40px;
+            height: 6px;
+
+            background: rgb(0, 80, 255);
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(255, 101, 47, .2);
+            transition: all .5s ease-in-out;
+        }
+
+        .menu-btn__burgerchange::before {
+            background: #8A837C;
+        }
+
+        .menu-btn__burger::before {
+            transform: translateY(-16px);
+        }
+
+        .menu-btn__burger::after {
+            transform: translateY(16px);
+        }
+
+        /* ANIMATION */
+        .menu-btn.open .menu-btn__burger {
+            transform: translateX(-50px);
+            background: transparent;
+            box-shadow: none;
+        }
+
+        .menu-btn.open .menu-btn__burger::before {
+            transform: rotate(45deg) translate(35px, -35px);
+        }
+
+        .menu-btn.open .menu-btn__burger::after {
+            transform: rotate(-45deg) translate(35px, 35px);
+        }
+
+        /*humburgerbutton*/
+        .header {
+            padding: 0 20px;
+
+        }
+
+
+        .header nav {
+            position: absolute;
+            width: 100%;
+            height: calc(100vh - 0px);
+            background: #F4ECE6;
+            font-size: 20px;
+
+            left: -100%;
+            transition: 0.5s;
+        }
+
+        .header nav.active {
+            left: 0;
+        }
+
+        .header nav ul {
+            display: block;
+            text-align: center;
+            padding-top: 40px;
+        }
+
+        .header nav ul li {
+
+            margin-top: 40px;
+
+
+        }
+
+        .header nav ul li a {
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        #project-manager {
+            font-weight: normal;
+            font-size: 17px;
+            display: none;
+        }
+
+        .left-skillset {
+            width: 100%;
+        }
+
+        .invisible-mobile-view-footer {
+            display: none;
+        }
+
+        /*footer for mobile*/
+        .footer-for-mobile {
+            padding-top: 5px;
+        }
+
+        .footer-for-mobile .mob-call {
+            float: left;
+        }
+
+        .footer-for-mobile .mob-call span {
+            font-weight: bold;
+        }
+
+        .footer-for-mobile .mob-write {
+            float: right;
+        }
+
+        .footer-for-mobile .mob-write span {
+            font-weight: bold;
+        }
+
+        .footer-for-mobile .mob-follow span {
+            font-weight: bold;
+        }
+
+        .footer-for-mobile ul {
+            list-style: none;
+            display: flex;
+            margin-left: -40px;
+        }
+
+        .footer-for-mobile li {
+            margin-right: 20px;
+        }
+    }
+    @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+        /*humburgerbutton*/
+        .menu-btn {
+            position: relative;
+            display: flex;
+            float: right;
+            justify-content: center;
+            align-items: center;
+            width: 100px;
+            height: 50px;
+            cursor: pointer;
+            transition: all .5s ease-in-out;
+            margin-top: 20px;
+            padding-top: 0;
+            /* border: 3px solid #fff; */
+        }
+
+        .menu-btn__burger {
+            width: 50px;
+            height: 6px;
+            background: rgb(0, 80, 255);
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(255, 101, 47, .2);
+            transition: all .5s ease-in-out;
+        }
+
+        .menu-btn__burger::before,
+        .menu-btn__burger::after {
+            content: '';
+            position: absolute;
+            width: 40px;
+            height: 6px;
+
+            background: rgb(0, 80, 255);
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(255, 101, 47, .2);
+            transition: all .5s ease-in-out;
+        }
+
+        .menu-btn__burgerchange::before {
+            background: #8A837C;
+        }
+
+        .menu-btn__burger::before {
+            transform: translateY(-16px);
+        }
+
+        .menu-btn__burger::after {
+            transform: translateY(16px);
+        }
+
+        /* ANIMATION */
+        .menu-btn.open .menu-btn__burger {
+            transform: translateX(-50px);
+            background: transparent;
+            box-shadow: none;
+        }
+
+        .menu-btn.open .menu-btn__burger::before {
+            transform: rotate(45deg) translate(35px, -35px);
+        }
+
+        .menu-btn.open .menu-btn__burger::after {
+            transform: rotate(-45deg) translate(35px, 35px);
+        }
+
+        /*humburgerbutton*/
+        .header {
+            padding: 0 20px;
+
+        }
+
+
+        .header nav {
+            position: absolute;
+            width: 100%;
+            height: calc(100vh - 0px);
+            background: #F4ECE6;
+            font-size: 20px;
+
+            left: -100%;
+            transition: 0.5s;
+        }
+
+        .header nav.active {
+            left: 0;
+        }
+
+        .header nav ul {
+            display: block;
+            text-align: center;
+            padding-top: 40px;
+        }
+
+        .header nav ul li {
+
+            margin-top: 40px;
+
+
+        }
+
+        .header nav ul li a {
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        #project-manager {
+            font-weight: normal;
+            font-size: 17px;
+            display: none;
+        }
+
+        .left-skillset {
+            width: 100%;
+        }
+
+        .invisible-mobile-view-footer {
+            display: none;
+        }
+
+        /*footer for mobile*/
+        .footer-for-mobile {
+            padding-top: 5px;
+        }
+
+        .footer-for-mobile .mob-call {
+            float: left;
+        }
+
+        .footer-for-mobile .mob-call span {
+            font-weight: bold;
+        }
+
+        .footer-for-mobile .mob-write {
+            float: right;
+        }
+
+        .footer-for-mobile .mob-write span {
+            font-weight: bold;
+        }
+
+        .footer-for-mobile .mob-follow span {
+            font-weight: bold;
+        }
+
+        .footer-for-mobile ul {
+            list-style: none;
+            display: flex;
+            margin-left: -40px;
+        }
+
+        .footer-for-mobile li {
+            margin-right: 20px;
+        }
+    }
+    @media (min-width: 768px) and (max-width: 1024px) {
+        /*humburgerbutton*/
+        .menu-btn {
+            position: relative;
+            display: flex;
+            float: right;
+            justify-content: center;
+            align-items: center;
+            width: 100px;
+            height: 50px;
+            cursor: pointer;
+            transition: all .5s ease-in-out;
+            margin-top: 20px;
+            padding-top: 0;
+            /* border: 3px solid #fff; */
+        }
+
+        .menu-btn__burger {
+            width: 50px;
+            height: 6px;
+            background: rgb(0, 80, 255);
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(255, 101, 47, .2);
+            transition: all .5s ease-in-out;
+        }
+
+        .menu-btn__burger::before,
+        .menu-btn__burger::after {
+            content: '';
+            position: absolute;
+            width: 40px;
+            height: 6px;
+
+            background: rgb(0, 80, 255);
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(255, 101, 47, .2);
+            transition: all .5s ease-in-out;
+        }
+
+        .menu-btn__burgerchange::before {
+            background: #8A837C;
+        }
+
+        .menu-btn__burger::before {
+            transform: translateY(-16px);
+        }
+
+        .menu-btn__burger::after {
+            transform: translateY(16px);
+        }
+
+        /* ANIMATION */
+        .menu-btn.open .menu-btn__burger {
+            transform: translateX(-50px);
+            background: transparent;
+            box-shadow: none;
+        }
+
+        .menu-btn.open .menu-btn__burger::before {
+            transform: rotate(45deg) translate(35px, -35px);
+        }
+
+        .menu-btn.open .menu-btn__burger::after {
+            transform: rotate(-45deg) translate(35px, 35px);
+        }
+
+        /*humburgerbutton*/
+        .header {
+            padding: 0 20px;
+
+        }
+
+
+        .header nav {
+            position: absolute;
+            width: 100%;
+            height: calc(100vh - 0px);
+            background: #F4ECE6;
+            font-size: 20px;
+
+            left: -100%;
+            transition: 0.5s;
+        }
+
+        .header nav.active {
+            left: 0;
+        }
+
+        .header nav ul {
+            display: block;
+            text-align: center;
+            padding-top: 40px;
+        }
+
+        .header nav ul li {
+
+            margin-top: 40px;
+
+
+        }
+
+        .header nav ul li a {
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        #project-manager {
+            font-weight: normal;
+            font-size: 17px;
+            display: none;
+        }
+
+        .left-skillset {
+            width: 100%;
+        }
+
+        .invisible-mobile-view-footer {
+            display: none;
+        }
+
+        /*footer for mobile*/
+        .footer-for-mobile {
+            padding-top: 5px;
+        }
+
+        .footer-for-mobile .mob-call {
+            float: left;
+        }
+
+        .footer-for-mobile .mob-call span {
+            font-weight: bold;
+        }
+
+        .footer-for-mobile .mob-write {
+            float: right;
+        }
+
+        .footer-for-mobile .mob-write span {
+            font-weight: bold;
+        }
+
+        .footer-for-mobile .mob-follow span {
+            font-weight: bold;
+        }
+
+        .footer-for-mobile ul {
+            list-style: none;
+            display: flex;
+            margin-left: -40px;
+        }
+
+        .footer-for-mobile li {
+            margin-right: 20px;
+        }
+    }
+
+/*tabview finish*/
+
+    /*desktops*/
+    @media (min-width: 1025px) and (max-width: 1280px) {
+        .mobile-view-buttons {
+            display: none;
+        }
+
+        .mobile-info-card {
+            display: none;
+
+        }
+
+        .footer-for-mobile {
+            display: none;
+        }
+    }
+
+    @media (min-width: 1281px) {
+        .mobile-view-buttons {
+            display: none;
+        }
+
+        .mobile-info-card {
+            display: none;
+
+        }
+
+        .footer-for-mobile {
+            display: none;
+        }
+    }
+</style>
+<body>
+
+<div class="header">
+
+
+    <div class="logo">
+        <img src="bluebox.png" class="blue-box">
+        Maya Nelson<span id="project-manager">&nbsp;/ Project Manager</span></div>
+    <nav>
+        <ul>
+            <li><a href="home.html" class="active">ABOUT ME</a></li>
+            <li><a href="resume.html">RESUME</a></li>
+            <li><a href="projects.html">PROJECTS</a></li>
+            <li><a href="contact.html">CONTACT</a></li>
+        </ul>
+    </nav>
+    <div class="menu-btn">
+        <div class="menu-btn__burger"></div>
+    </div>
+
+</div>
+<!--maincontent-->
+<div class="back-div">
+    <div class="resume-heading">
+        <img src="bluebox.png" class="blue-box">
+        Resume
+    </div>
+    <div class="container experience-div">
+
+        <div class="experience col-lg-6 col-12">
+            <h2>Experience</h2>
+        </div>
+        <div class="cv col-lg-6 col-12">
+
+            <button class="btn btn-primary resume-btn btn-sm">Download CV</button>
+        </div>
+    </div><!--container-->
+
+
+    <!--firstcard row-->
+    <div class="first-resume-card row">
+
+        <div class="left-div col-lg-6 col-12">
+            <div class="left-adjustment">
+                <h2 class="present">2019 - Present</h2>
+
+                <h2 class="jobposition">JOB POSITION</h2>
+
+                <h2 class="compapnyname">Company Name</h2>
+
+                <h2 class="companylocation">Company Location</h2>
+            </div>
+        </div>
+        <div class="right-div col-lg-6 col-12 ">
+            <div class="paragraph">
+
+
+                <p>
+                    I'm a paragraph. Click here to add your own text and edit me. It’s easy. Just click “Edit Text” or
+                    double click me to add your own content and make changes to the font.
+                    <br>
+                    <br>
+
+
+                    I’m a great place for you to tell a story and let your users know a little more about you.
+                </p>
+            </div>
+        </div>
+
+    </div><!--firstdiv-->
+
+
+    <!--secondcard row-->
+    <div class="first-resume-card row">
+
+        <div class="left-div col-lg-6 col-12">
+            <div class="left-adjustment">
+                <h2 class="present">2017 - 2019</h2>
+
+                <h2 class="jobposition">JOB POSITION</h2>
+
+                <h2 class="compapnyname">Company Name</h2>
+
+                <h2 class="companylocation">Company Location</h2>
+            </div>
+        </div>
+        <div class="right-div col-lg-6 col-12 ">
+            <div class="paragraph">
+
+
+                <p>
+                    I'm a paragraph. Click here to add your own text and edit me. It’s easy. Just click “Edit Text” or
+                    double click me to add your own content and make changes to the font.
+                    <br>
+                    <br>
+
+
+                    I’m a great place for you to tell a story and let your users know a little more about you.
+                </p>
+            </div>
+        </div>
+
+    </div><!--seconddiv-->
+
+
+    <!-------------------------------education cards-->
+
+    <div class="container experience-div">
+
+        <div class="experience col-lg-6 col-12">
+            <h2>Education</h2>
+        </div>
+
+    </div><!--container-->
+
+
+    <!--firstcard row-->
+    <div class="first-resume-card row">
+
+        <div class="left-div col-lg-6 col-12">
+            <div class="left-adjustment">
+                <h2 class="present">2015 - 2017</h2>
+
+                <h2 class="jobposition">UNIVERSITY NAME</h2>
+
+                <h2 class="compapnyname">Degree Level</h2>
+
+                <h2 class="companylocation">University Location</h2>
+            </div>
+        </div>
+        <div class="right-div col-lg-6 col-12 ">
+            <div class="paragraph">
+
+
+                <p>
+                    I'm a paragraph. Click here to add your own text and edit me. It’s easy. Just click “Edit Text” or
+                    double click me to add your own content and make changes to the font.
+                    <br>
+                    <br>
+
+
+                    I’m a great place for you to tell a story and let your users know a little more about you.
+                </p>
+            </div>
+        </div>
+
+    </div><!--firstdiv-->
+
+
+    <!--secondcard row-->
+    <div class="first-resume-card row">
+
+        <div class="left-div col-lg-6 col-12">
+            <div class="left-adjustment">
+                <h2 class="present">2012 - 2015</h2>
+
+                <h2 class="jobposition">UNIVERSITY NAME</h2>
+
+                <h2 class="compapnyname">Degree Level</h2>
+
+                <h2 class="companylocation">University Location</h2>
+            </div>
+        </div>
+        <div class="right-div col-lg-6 col-12 ">
+            <div class="paragraph">
+
+
+                <p>
+                    I'm a paragraph. Click here to add your own text and edit me. It’s easy. Just click “Edit Text” or
+                    double click me to add your own content and make changes to the font.
+                    <br>
+                    <br>
+
+
+                    I’m a great place for you to tell a story and let your users know a little more about you.
+                </p>
+            </div>
+        </div>
+
+    </div><!--seconddiv-->
+
+
+    <!---------------------professional skillset-->
+    <div class="professional-skill-set">
+        <div id="professional-heading">
+            <h2>Professional Skillset</h2>
+        </div>
+        <div class="main row">
+
+            <div class="left-skillset col-lg-6 col-12">
+                <img src="bluebox.png" width="15px"><span>Entrepreneurial Mindset</span>
+            </div>
+
+            <div class="right-skillset col-lg-6 col-12">
+                <img src="bluebox.png" width="15px"><span>Go-to-Market Planning</span>
+            </div>
+
+
+            <div class="left-skillset col-lg-6 col-12">
+                <img src="bluebox.png" width="15px"><span>Teamwork & Collaboration</span>
+            </div>
+
+            <div class="right-skillset col-lg-6 col-12">
+                <img src="bluebox.png" width="15px"><span>Digital Analytics</span>
+            </div>
+
+
+            <div id="language-heading">
+                <h2>Languages</h2>
+            </div>
+
+            <div class="left-skillset col-lg-6 col-12">
+                <img src="bluebox.png" width="15px"><span>English (native)</span>
+            </div>
+
+            <div class="right-skillset col-lg-6 col-12">
+                <img src="bluebox.png" width="15px"><span>French (proficient)</span>
+            </div>
+
+
+            <div class="left-skillset col-lg-6 col-12">
+                <img src="bluebox.png" width="15px"><span>Spanish (proficient)</span>
+            </div>
+
+        </div>
+        </div>
+
+    </div><!--back div-->
+
+
+
+
+    <!----------footer-->
+    <div class="container-fluid invisible-mobile-view-footer">
+        <div class="row footer">
+            <div class="col-lg-3">
+                <p class="copyright">
+                    © 2023 by Maya Nelson.
+                    <br>
+                    Proudly created with Wix.com
+                </p>
+            </div>
+            <div class="col-lg-3">
+                <p class="call">
+                    <span>Call</span>
+                    <br>
+                    123-456-7890
+                </p>
+            </div>
+            <div class="col-lg-3">
+
+                <p class="write">
+
+                    <span>Write</span>
+                    <br>
+                    info@mysite.com
+                </p>
+            </div>
+            <div class="col-lg-3">
+                <p class="follow">
+                    <span>Follow</span>
+                    <br>
+                <ul class="footer-social-icons">
+                    <li><img src="facebook.svg" width="15px"></li>
+                    <li><img src="twitter.svg" width="15px"></li>
+                    <li><img src="linkedin.svg" width="15px"></li>
+                    <li><img src="instagram.svg" width="15px"></li>
+                </ul>
+                </p>
+
+            </div>
+        </div>
+    </div>
+
+    <!--footer for mobile view-->
+    <div class="container-fluid footer-for-mobile">
+        <div class="mob-call col-6">
+            <p>
+                <span>Call</span>
+                <br>
+                123-456-7890
+            </p>
+        </div>
+        <div class="mob-write col-6">
+            <p>
+                <span>Write</span>
+                <br>
+                info@mysite.com
+            </p>
+        </div>
+        <div class="mob-follow col-12">
+
+            <span>Follow</span>
+            <br>
+            <ul class="mob-footer-social-icons">
+                <li><img src="facebook.svg" width="15px"></li>
+                <li><img src="twitter.svg" width="15px"></li>
+                <li><img src="linkedin.svg" width="15px"></li>
+                <li><img src="instagram.svg" width="15px"></li>
+            </ul>
+
+        </div>
+
+        <div class="col-12">
+            <p class="mob-copyright">
+                © 2023 by Maya Nelson.
+                <br>
+                Proudly created with Wix.com
+            </p>
+        </div>
+    </div>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $(".menu-btn").click(function () {
+                $("nav").toggleClass("active");
+
+            });
+        });
+
+
+        const menuBtn = document.querySelector('.menu-btn');
+        let menuOpen = false;
+        menuBtn.addEventListener('click', () => {
+            if (!menuOpen) {
+                menuBtn.classList.add('open');
+                menuOpen = true;
+
+
+            } else {
+                menuBtn.classList.remove('open');
+                menuOpen = false;
+
+            }
+
+        });
+
+    </script>
+</body>
+</html>
