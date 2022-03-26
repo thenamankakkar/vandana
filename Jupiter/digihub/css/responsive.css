@@ -58,6 +58,9 @@
 }
 
 @media (min-width: 576px) and (max-width: 767px) {
+    .mobile{
+        margin-top: 15px;
+    }
     .text-img{
         display: none;
     }
@@ -135,6 +138,9 @@
 }
 
 @media (max-width: 575px) {
+    .mobile{
+        margin-top: 15px;
+    }
     .text-img{
         display: none;
     }
