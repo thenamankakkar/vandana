@@ -29,6 +29,12 @@
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
+    .text-img{
+        display: none;
+    }
+    .text-img-mob-view{
+        display: block !important;
+    }
     .projects::after {
         background: transparent;
     }
@@ -52,8 +58,14 @@
 }
 
 @media (min-width: 576px) and (max-width: 767px) {
+    .text-img{
+        display: none;
+    }
+    .text-img-mob-view{
+        display: block !important;
+    }
     .head_top {
-        background: #0891f8;
+        background: #F7AD76;
     }
     .mean-container .mean-bar {
         margin-top: 0px;
@@ -71,7 +83,7 @@
         margin: 0;
     }
     .Testimonial {
-        background: #0891f8;
+        background: #F7AD76;
     }
     .Testimonial_box {
         padding: 20px;
@@ -123,8 +135,14 @@
 }
 
 @media (max-width: 575px) {
+    .text-img{
+        display: none;
+    }
+    .text-img-mob-view{
+        display: block !important;
+    }
     .head_top {
-        background: #0891f8;
+        background: #F7AD76;
     }
     .header {
         padding: 12px 0px 0px 0px;
@@ -159,7 +177,7 @@
         background: transparent;
     }
     .Testimonial {
-        background: #0891f8;
+        background: #F7AD76;
     }
     .Testimonial_box {
         padding: 20px;

@@ -361,7 +361,7 @@ button {
 .text-bg a {
      font-size: 17px;
      background-color: #fff;
-     color: #0891f8;
+     color: #F7AD76;
      padding: 13px 0px;
      width: 100%;
      max-width: 190px;
@@ -418,7 +418,7 @@ button {
 }
 
 .business .titlepage span {
-     color: #0891f8;
+     color: #F7AD76;
      font-size: 30px;
      font-family: 'Baloo Chettan', cursive;
      text-transform: uppercase;
@@ -457,7 +457,7 @@ button {
 }
 
 .business .business_box .read_more:hover {
-     background: #0891f8;
+     background: #F7AD76;
 }
 
 
@@ -482,7 +482,7 @@ button {
 }
 
 .projects .titlepage span {
-     color: #0891f8;
+     color: #F7AD76;
      font-size: 30px;
      font-family: 'Baloo Chettan', cursive;
      text-transform: uppercase;
@@ -521,7 +521,7 @@ button {
 }
 
 .projects .projects_box .read_more:hover {
-     background: #0891f8;
+     background: #F7AD76;
 }
 
 
@@ -779,7 +779,7 @@ ul.social_icon li a:hover {
 
 .copyright {
      padding: 20px 0px;
-     background: #0891f8;
+     background: #F7AD76;
      margin-top: 50px;
      position: relative;
 }

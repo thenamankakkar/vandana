@@ -66,13 +66,13 @@
                            <div class="collapse navbar-collapse" id="navbarsExample04">
                               <ul class="navbar-nav mr-auto">
                                  <li class="nav-item">
-                                    <a class="nav-link" href="#"> Home  </a>
+                                    <a class="nav-link" href="#home"> Home  </a>
                                  </li>
                                  <li class="nav-item">
-                                    <a class="nav-link" href="#">About</a>
+                                    <a class="nav-link" href="#about">About</a>
                                  </li>
                                  <li class="nav-item">
-                                    <a class="nav-link" href="#">Contact</a>
+                                    <a class="nav-link" href="#contact">Contact</a>
                                  </li>
                               </ul>
                            </div>
@@ -84,7 +84,7 @@
             <!-- end header inner -->
             <!-- end header -->
             <!-- banner -->
-            <section class="banner_main">
+            <section id="home" class="banner_main">
                <div class="container-fluid">
                   <div class="row d_flex">
                      <div class="col-md-6">
@@ -106,6 +106,9 @@
                                         data-max-width="100%"
                                         data-max-height="100%"
                                         src="images/box_img.png" alt="#"/></figure>
+                        </div>
+                        <div class="text-img-mob-view" style="display: none">
+                           <figure><img src="images/box_img.png" alt="#"/></figure>
                         </div>
                      </div>
                   </div>
@@ -198,6 +201,28 @@
                            I would highly recommend Jupiter! Their SEO team is easy to work with. Got really productive suggestions to improve our local SEO. Job well done! Thank you so much!
                         </p>
                      </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="section">
+         <div class="container">
+            <div id="about" class="">
+               <div class="row">
+                  <div class="col-md-12">
+                     <div class="titlepage">
+                        <h2>About us</h2>
+                     </div>
+                  </div>
+                  <div class="col-sm-6">
+                     <img src="images/proud_about.svg" alt="" >
+                  </div>
+                  <div class="col-sm-6" style="text-align: justify">
+                     <h2>Unified Services:</h2>
+                     <h3>Jupiter Digi Hub stays ahead of the curve with digital marketing trends. Our success has us leading the pack amongst our competitors with our ability to anticipate change and innovation.
+                        We aim at making work easier for entrepreneurs and we assist customers with all their business needs. Our skilled team will assist you at each step of the Business development lifecycle. We are the best when it comes to providing an amalgamation of business and technology as we provide smart solutions. So no matter what are your business needs, our team will be there to assist you whenever you need it!
+                     </h3>
                   </div>
                </div>
             </div>
@@ -307,6 +332,12 @@
          };
       </script>-->
    <!--Particle image script-->
+   <script>
+      element.scrollIntoView({
+         behavior: 'smooth',
+         block: 'start' // scroll to top of target element
+      })
+   </script>
 
    </body>
 </html>
