@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@1,700&display=swap');
 
 
-.text-animation h1 {
+/*.text-animation h1 {
     font-family: Roboto;
     background-image: url(https://media.giphy.com/media/26BROrSHlmyzzHf3i/giphy.gif);
     background-size: cover;
@@ -13,4 +13,28 @@
     line-height: .75;
     margin: 10px 0;
     font-weight: bolder;
+}*/
+
+.text-animation h1 {
+    font-family: Roboto;
+    text-transform: uppercase;
+    font-size: 28px;
+    line-height: .75;
+    margin: 10px 0;
+    letter-spacing: 2px;
+    text-align: center;
+    color: #f35626;
+    background-image: -webkit-linear-gradient(92deg, #f35626, #feab3a);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-animation: hue 10s infinite linear;
+}
+
+@-webkit-keyframes hue {
+    from {
+        -webkit-filter: hue-rotate(0deg);
+    }
+    to {
+        -webkit-filter: hue-rotate(-360deg);
+    }
 }
