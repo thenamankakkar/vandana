@@ -1,37 +1,13 @@
-
-
-/*--------------------------------------------------------------------- File Name: style.css ---------------------------------------------------------------------*/
-
-
-/*--------------------------------------------------------------------- import Fonts ---------------------------------------------------------------------*/
-
-@import url('https://fonts.googleapis.com/css?family=Rajdhani:300,400,500,600,700');
-@import url('https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i');
-@import url('https://fonts.googleapis.com/css?family=Baloo+Chettan&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Lato:400,700,900&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Lato:400,700,900|Righteous&display=swap');
-
-/*****---------------------------------------- 1) font-family: 'Rajdhani', sans-serif;
- 2) font-family: 'Poppins', sans-serif;
- ----------------------------------------*****/
-
-
-/*--------------------------------------------------------------------- import Files ---------------------------------------------------------------------*/
-
 @import url(animate.min.css);
 @import url(normalize.css);
 @import url(icomoon.css);
 @import url(font-awesome.min.css);
 @import url(meanmenu.css);
 @import url(owl.carousel.min.css);
-@import url(swiper.min.css);
 @import url(slick.css);
 @import url(jquery.fancybox.min.css);
 @import url(jquery-ui.css);
 @import url(nice-select.css);
-
-/*--------------------------------------------------------------------- skeleton ---------------------------------------------------------------------*/
-
 * {
      box-sizing: border-box !important;
 }
@@ -39,13 +15,49 @@
 html {
      scroll-behavior: smooth;
 }
+/* width */
+::-webkit-scrollbar {
+     width: 10px;
+}
 
+/* Track */
+::-webkit-scrollbar-track {
+     background: #f9d480;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+     background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+     background: #555;
+}
+@keyframes slideInFromLeft {
+     0% {
+          transform: translateX(-100%);
+     }
+     100% {
+          transform: translateX(0);
+     }
+}
+
+header {
+     /* This section calls the slideInFromLeft animation we defined above */
+     animation: 1.5s ease-out 0s 1 slideInFromLeft;
+}
+@font-face {
+     font-family: 'Proxima';
+     src: url('../fonts/proxima_nova_font.otf') format('otf');
+}
 body {
      color: #666666;
      font-size: 14px;
-     font-family: 'Lato', sans-serif;
+     font-family: Proxima, serif;
      line-height: 1.80857;
      font-weight: normal;
+     overflow-x: hidden ;
 }
 
 a {
@@ -77,17 +89,17 @@ h6 {
 
 h1 {
      font-size: 24px;
-     font-family: 'Baloo Chettan', cursive;
+     font-family: Proxima, serif;
 }
 
 h2 {
      font-size: 22px;
-     font-family: 'Baloo Chettan', cursive;
+     font-family: Proxima, serif;
 }
 
 h3 {
      font-size: 18px;
-     font-family: 'Baloo Chettan', cursive;
+     font-family: Proxima, serif;
 }
 
 h4 {
@@ -279,12 +291,12 @@ button {
 /*-- navigation--*/
 
 .navigation.navbar {
-     padding-top: 30px;
+     padding-top: 67px;
 }
 
 .navigation.navbar-dark .navbar-nav .nav-link {
-     padding: 0 25px;
-     color: #fff;
+     padding: 0 20px;
+     color: black;
      font-size: 16px;
      line-height: 20px;
      text-transform: uppercase;
@@ -292,7 +304,8 @@ button {
 
 .navigation.navbar-dark .navbar-nav .nav-link:focus,
 .navigation.navbar-dark .navbar-nav .nav-link:hover {
-     color: #000;
+     color: red;
+     border: 1px solid black;
 }
 
 .navigation.navbar-dark .navbar-nav .active>.nav-link,
@@ -311,6 +324,12 @@ button {
 
 /*--------------------------------------------------------------------- layout new css ---------------------------------------------------------------------*/
 
+#head_list{
+     display: flex;
+}
+#head_list li {
+     margin: 0px 20px;
+}
 .head_top {
      background: url(../images/banner.png);
      background-size: 100% 100%;
@@ -345,14 +364,14 @@ button {
 }
 
 .text-bg h1 {
-     color: #fff;
+     color: black;
      font-size: 48px;
      line-height: 65px;
      font-weight: bold;
 }
 
 .text-bg p {
-     color: #fff;
+     color: black;
      font-size: 17px;
      line-height: 28px;
      padding: 40px 0;
@@ -360,8 +379,8 @@ button {
 
 .text-bg a {
      font-size: 17px;
-     background-color: #fff;
-     color: #F7AD76;
+     background-color: black;
+     color: #f9d480;
      padding: 13px 0px;
      width: 100%;
      max-width: 190px;
@@ -372,8 +391,8 @@ button {
 }
 
 .text-bg a:hover {
-     background-color: #000;
-     color: #fff;
+     background-color: #fff;
+     color: #000000;
      transition: ease-in all 0.5s;
      border-radius: 26px;
 }
@@ -418,9 +437,9 @@ button {
 }
 
 .business .titlepage span {
-     color: #F7AD76;
+     color: #f9d480;
      font-size: 30px;
-     font-family: 'Baloo Chettan', cursive;
+     font-family: Proxima, serif;
      text-transform: uppercase;
      line-height: 37px;
      padding-bottom: 10px;
@@ -457,7 +476,7 @@ button {
 }
 
 .business .business_box .read_more:hover {
-     background: #F7AD76;
+     background: #f9d480;
 }
 
 
@@ -482,9 +501,9 @@ button {
 }
 
 .projects .titlepage span {
-     color: #F7AD76;
+     color: #f9d480;
      font-size: 30px;
-     font-family: 'Baloo Chettan', cursive;
+     font-family: Proxima, serif;
      text-transform: uppercase;
      line-height: 37px;
      padding-bottom: 10px;
@@ -521,7 +540,7 @@ button {
 }
 
 .projects .projects_box .read_more:hover {
-     background: #F7AD76;
+     background: #f9d480;
 }
 
 
@@ -689,6 +708,24 @@ button {
 
 
 /** end contact section **/
+.business-list .read_more {
+     font-size: 17px;
+     background-color: black;
+     color: white;
+     padding: 13px 0px;
+     width: 100%;
+     max-width: 190px;
+     text-align: center;
+     display: inline-block;
+     transition: ease-in all 0.5s;
+     border-radius: 10px;
+}
+.business-list .read_more:hover {
+     background: #f9d480;
+     color: red;
+     border-radius: 26px;
+     transition: ease-in all 0.5s;
+}
 
 .read_more {
      font-size: 17px;
@@ -705,6 +742,24 @@ button {
 
 .read_more:hover {
      background: #000;
+     color: #fff;
+     border-radius: 26px;
+     transition: ease-in all 0.5s;
+}
+.services_read_more{
+     font-size: 17px;
+     background-color: #fff;
+     color: #000;
+     padding: 13px 0px;
+     width: 100%;
+     max-width: 190px;
+     text-align: center;
+     display: inline-block;
+     transition: ease-in all 0.5s;
+     border-radius: 10px;
+}
+.services_read_more:hover {
+     background: #f9d480 !important;
      color: #fff;
      border-radius: 26px;
      transition: ease-in all 0.5s;
@@ -727,7 +782,7 @@ button {
 }
 
 .cont h3 {
-     font-family: 'Righteous', cursive;
+     font-family: Proxima, serif;
      font-size: 30px;
      line-height: 45px;
      color: #23262d;
@@ -779,7 +834,7 @@ ul.social_icon li a:hover {
 
 .copyright {
      padding: 20px 0px;
-     background: #F7AD76;
+     background: #f9d480;
      margin-top: 50px;
      position: relative;
 }
@@ -812,3 +867,7 @@ ul.social_icon li a:hover {
 
 /** end footer **/
 
+.business-list ul{
+     margin: 0 30px;
+     font-size: 20px;
+}

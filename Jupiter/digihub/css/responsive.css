@@ -68,7 +68,7 @@
         display: block !important;
     }
     .head_top {
-        background: #F7AD76;
+        background: #f9d480;
     }
     .mean-container .mean-bar {
         margin-top: 0px;
@@ -86,7 +86,7 @@
         margin: 0;
     }
     .Testimonial {
-        background: #F7AD76;
+        background: #f9d480;
     }
     .Testimonial_box {
         padding: 20px;
@@ -148,7 +148,7 @@
         display: block !important;
     }
     .head_top {
-        background: #F7AD76;
+        background: #f9d480;
     }
     .header {
         padding: 12px 0px 0px 0px;
@@ -183,7 +183,7 @@
         background: transparent;
     }
     .Testimonial {
-        background: #F7AD76;
+        background: #f9d480;
     }
     .Testimonial_box {
         padding: 20px;
@@ -213,7 +213,7 @@
         display: inherit !important;
         padding: 0;
         width: 100%;
-        margin-top: -60px;
+        margin-top: -100px;
     }
     .navigation .navbar-collapse {
         background: #fff;
