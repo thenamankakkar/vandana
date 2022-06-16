@@ -138,6 +138,9 @@
 }
 
 @media (max-width: 575px) {
+    #head_list li{
+        margin: 0 10px;
+    }
     .mobile{
         margin-top: 15px;
     }
